@@ -1,0 +1,14 @@
+<div class="container m-3">
+  <h1>Tasks List</h1>
+    <% @tasks.each do |task| %>
+    <div>
+      <%# <% if task.completed == true %>
+          <%= link_to task.title, task_path(task) %>
+      <%# <% else %>
+      <%# <% end %>
+    </div>
+    <% end %>
+    <div class="container m-3 border-start border-5">
+      <%= link_to 'Create a new task', new_task_path, class: 'btn btn-primary' %>
+    </div>
+</div>
